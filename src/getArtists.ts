@@ -57,7 +57,7 @@ const ARTISTS: Artist[] = [
   }
 ]
 
-export default async function getArtists(query: string): Promise<Artist[]> {
+export default async function getArtists(query?: string): Promise<Artist[]> {
   await new Promise(resolve => setTimeout(resolve, 1000))
   if (!query) {
     return ARTISTS
